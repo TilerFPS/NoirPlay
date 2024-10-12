@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoirPlay - Portal de Vídeos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>NoirPlay</h1>
+    </header>
+    <main>
+        <section class="video-container">
+            <article class="video" onclick="openModal('https://www.youtube.com/embed/example1')">
+                <h2>Vídeo 1 (YouTube)</h2>
+                <img src="thumbnail1.jpg" alt="Thumbnail Vídeo 1">
+            </article>
+            <article class="video" onclick="openModal('https://player.vimeo.com/video/example2')">
+                <h2>Vídeo 2 (Vimeo)</h2>
+                <img src="thumbnail2.jpg" alt="Thumbnail Vídeo 2">
+            </article>
+            <article class="video" onclick="openModal('https://www.dailymotion.com/embed/video/example3')">
+                <h2>Vídeo 3 (Dailymotion)</h2>
+                <img src="thumbnail3.jpg" alt="Thumbnail Vídeo 3">
+            </article>
+        </section>
+    </main>
+
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <iframe id="videoFrame" frameborder="0" allowfullscreen></iframe>
+            <aside class="recommendations">
+                <h3>Recomendados</h3>
+                <ul>
+                    <li onclick="openModal('https://www.youtube.com/embed/example4')">Vídeo Recomendado 1</li>
+                    <li onclick="openModal('https://player.vimeo.com/video/example5')">Vídeo Recomendado 2</li>
+                    <li onclick="openModal('https://www.dailymotion.com/embed/video/example6')">Vídeo Recomendado 3</li>
+                </ul>
+            </aside>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 NoirPlay</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
